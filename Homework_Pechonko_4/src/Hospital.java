@@ -1,0 +1,45 @@
+
+import java.util.Scanner;
+
+import Model.Doctor;
+import Model.Pacient;
+
+
+public class Hospital {
+
+	public static void main(String[] args) {
+		
+		Scanner in = new Scanner(System.in); 
+				
+		Doctor[] doctor = new Doctor[3];
+		Pacient[] pacient = new Pacient[6];
+					
+		for (int i=0; i<doctor.length; i++){
+			
+			System.out.println("Введите фамилию и инициалы доктора №" + i+1);
+			doctor[i].setName(in.nextLine());
+			System.out.println("Введите возраст доктора№:" + i+1);
+			doctor[i].setAge(in.nextInt());
+			System.out.println("Введите специализацию доктора (голова, сердце, глаза, печень)№:" + i+1);
+			doctor[i].setSpecialist(in.nextLine());
+			}
+		for (int i=0; i<pacient.length; i++){
+			System.out.println("Введите фамилию и инициалы пациента№:" + i+1);
+			pacient[i].setName(in.nextLine());
+			System.out.println("Введите возраст пациента№:" + i+1);
+			pacient[i].setAge(in.nextInt());
+			System.out.println("Что болит у пациента (голова, сердце, глаза, печень)№:" + i+1);
+		    }
+
+		for (int i=0; i<pacient.length; i++){
+			for (int j=0; j<doctor.length; j++){
+				if (pacient[i].getBolezn()==doctor[j].getSpecialist()); 
+						System.out.println("Пацент" + pacient[i].getName() + "- Ваш доктор" + doctor[j].getName());
+				
+			}
+			
+		}
+	}
+
+}
+

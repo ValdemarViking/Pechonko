@@ -1,0 +1,13 @@
+import java.util.Scanner;
+public class Policlinika {
+
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		System.out.println("Первое число =");
+        int a = in.nextInt();//считываем целое число a
+        System.out.println("Второе число =");
+        int b = in.nextInt();//считываем целое число b
+        System.out.println("Сумма чисел = " + a+b);//выводим сумму a+b
+	}
+
+}
